@@ -1,0 +1,2 @@
+- python class or function with preloaded data
+- dynamic version
