@@ -1,3 +1,4 @@
 mini-racer
-cairosvg
 rapidfuzz
+pandas
+cairosvg
