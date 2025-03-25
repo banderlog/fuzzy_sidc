@@ -14,4 +14,20 @@ requires-python = ">= 3.10"
 name='fuzzy_sidc'
 version='0.1.0'
 description="fyzzy search for SIDC"
+readme="README.md"
+keywords=['SIDC', 'NATO', 'sign']
+authors=[{name="Kabakov Borys", email="b.a.kabakov@gmail.com"},]
+license = "MIT"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Multimedia :: Graphics"
+]
 dependencies=['rapidfuzz', 'mini-racer']
+
+[project.urls]
+Homepage="https://github.com/banderlog/fuzzy_sidc"

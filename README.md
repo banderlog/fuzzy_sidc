@@ -32,8 +32,8 @@ pip install fuzzy_sidc
 ### Build
 
 ```bash
-git clone REPO
-cd REPO
+git clone https://github.com/banderlog/fuzzy_sidc
+cd fuzzy_sidc
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
 ./venv/bin/pip install build
@@ -45,7 +45,9 @@ python3 -m venv venv
 
 ### As Python class
 
-#### Get SIDC from description
+#### Load/create class object
+
+To use with external json/js:
 
 ```python
 from fuzzy_sidc import SIDCFuzzySearcher
@@ -55,7 +57,19 @@ path_to_set_a = 'set_a.json'
 path_to_set_b = 'set_b_2525d.json'  # or 'set_b_app6d.json'
 path_to_milsymboljs = 'milsymbol.js'
 x = SIDCFuzzySearcher(path_to_set_a, path_to_set_b, path_to_milsymboljs)
+```
+or use supplied by package:
 
+```python
+from fuzzy_sidc import get_preloaded_SIDCFuzzySearcher
+
+x = get_preloaded_SIDCFuzzySearcher()  # 2525d
+x = get_preloaded_SIDCFuzzySearcher('app6d')
+```
+
+#### Get SIDC from description
+
+```bash
 # search in set A
 query_a = "Hostile Realty Land Present Platoon TaskForce"
 # search in set B

@@ -1,6 +1,7 @@
 import json
 import pathlib
 import rapidfuzz
+import importlib.resources
 from py_mini_racer import MiniRacer
 
 
@@ -106,3 +107,19 @@ class SIDCFuzzySearcher:
         print('IN SET B -- ', end='')
         choices_b = self._data_b.keys()
         _ = self._fuzzy_search(query, choices_b, n, True)
+
+
+def get_preloaded_SIDCFuzzySearcher(std: str = '2525d') -> SIDCFuzzySearcher:
+    # load data for sets, and js lib
+    #   https://importlib-resources.readthedocs.io/en/latest/using.html#migrating-from-legacy
+    path_to_set_a = importlib.resources.files('fuzzy_sidc').joinpath("set_a.json")
+    if std == '2525d':
+        path_to_set_b = importlib.resources.files('fuzzy_sidc').joinpath("set_b_2525d.json")
+    elif std == 'app6d':
+        path_to_set_b = importlib.resources.files('fuzzy_sidc').joinpath("set_b_app6d.json")
+    else:
+        raise Exception('Wrong datatset')
+    path_to_milsymbolsjs = importlib.resources.files('fuzzy_sidc').joinpath("milsymbol.js")
+    # load searcher
+    x = SIDCFuzzySearcher(path_to_set_a, path_to_set_b, path_to_milsymbolsjs)
+    return x
