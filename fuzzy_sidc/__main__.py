@@ -20,6 +20,8 @@ parser.add_argument('--svg-size', type=int, default=35, help='SVG size')
 
 parser.add_argument('-s', type=str, default='', help='Query to all sets, just show top n results')
 parser.add_argument('-n', type=int, default=10, help='n for TOP n')
+
+parser.add_argument('--sidc2svg', type=str, default='', help='Convert SIDC to SVG')
 args = parser.parse_args()
 
 # logic for arguments
@@ -49,3 +51,6 @@ elif (args.a or args.b):
         print(txt)
     else:
         print(sidc)
+elif args.sidc2svg:
+    txt = x.get_svg(args.sidc2svg, size=args.svg_size)
+    print(txt)

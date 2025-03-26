@@ -11,7 +11,7 @@ include = [
 
 [project]
 name = 'fuzzy_sidc'
-version = '0.1.1'
+version = '0.1.2'
 authors = [ { name="Kabakov Borys", email="b.a.kabakov@gmail.com" }, ]
 description = "fuzzy search for SIDC"
 readme = "README.md"
