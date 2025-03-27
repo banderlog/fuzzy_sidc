@@ -1,5 +1,6 @@
 # Fuzzy SIDC
 
+[![PyPI Downloads](https://static.pepy.tech/badge/fuzzy-sidc)](https://pepy.tech/projects/fuzzy-sidc) [![PyPI Downloads](https://static.pepy.tech/badge/fuzzy-sidc/month)](https://pepy.tech/projects/fuzzy-sidc) [![PyPI Downloads](https://static.pepy.tech/badge/fuzzy-sidc/week)](https://pepy.tech/projects/fuzzy-sidc)
 
 ## Description
 
